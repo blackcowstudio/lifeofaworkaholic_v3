@@ -8,16 +8,17 @@ public class DrawManager : MonoBehaviour
 	private int column;
 
 	// SetupBoard with List and Column
-	public void SetupBoard(int listSize, int columnSize) 
+	public void SetupBoard(int l, int c) 
 	{
 		// load asset using Resource.LoadALL into a Sprite Array
 		Sprite[] sprites = Resources.LoadAll<Sprite>("Textures/icons");
 		
 		// instantiate Card Class
-		CardManager card = new CardManager(listSize,columnSize);
+		CardManager card = new CardManager(l,c);
 		
 		// an array of GameObjects to store eachs individual card position
 		CardPosition = new GameObject[(card.ListSize/card.ColumnSize),card.ColumnSize];
+		
 		
 		// for loop to create list of caards
 		for (int i = 0; i<card.ListSize; i++)
