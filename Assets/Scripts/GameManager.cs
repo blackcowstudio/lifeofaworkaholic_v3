@@ -6,9 +6,9 @@ using System.Collections.Generic;
 
 public class GameManager : MonoBehaviour 
 {
-//	private GameObject[,] CardPosition;
-//	private int row;
-//	private int column;
+	private GameObject[,] CardPosition;
+	private int row;
+	private int column;
 	private DrawManager draw;
 	private string CurrentHit;
 	private string LastHit;
@@ -27,7 +27,7 @@ public class GameManager : MonoBehaviour
 	// Use this for initialization
 	void Start () 
 	{
-		//SetupBoard(25,5);
+		SetupBoard(25,5);
 	
 	}
 
@@ -136,7 +136,7 @@ public class GameManager : MonoBehaviour
 	}
 		
 	// SetupBoard with List and Column
-/*	void SetupBoard(int l, int c) 
+	void SetupBoard(int l, int c) 
 	{
 		// load asset using Resource.LoadALL into a Sprite Array
 		Sprite[] sprites = Resources.LoadAll<Sprite>("Textures/icons");
@@ -184,7 +184,7 @@ public class GameManager : MonoBehaviour
 			// add GameObject to multidimension array
 			CardPosition[row,column] = obj;
 		}
-	}	*/
+	}	
 }
 
 
