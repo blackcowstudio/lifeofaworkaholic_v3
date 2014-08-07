@@ -6,7 +6,7 @@ using System.Collections.Generic;
 
 public class GameManager : MonoBehaviour 
 {
-	public StateManager _state;
+	private StateManager _state;
 
 	// Use this for initialization
 	void Start () 

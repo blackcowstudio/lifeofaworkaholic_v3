@@ -58,6 +58,14 @@ public class DrawManager : MonoBehaviour
 		}
 	}	
 
+	public void DestroyBoard() 
+	{
+		foreach (GameObject i in CardPosition)
+		{
+			Destroy(i);
+		}
+	}
+
 	// Transform methods
 	public void SetObjScaleXY(GameObject obj, float n, float m) 
 	{
