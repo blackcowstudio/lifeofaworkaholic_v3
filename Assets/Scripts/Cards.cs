@@ -5,7 +5,7 @@ using UnityEngine;
 using System;
 using System.Collections;
 
-public abstract class ACard : MonoBehaviour
+public abstract class aCard : MonoBehaviour
 {
 	// Properties
 	private string ColorID;
@@ -14,7 +14,7 @@ public abstract class ACard : MonoBehaviour
 	private int ColumnID;
 
 	// Constructor
-	public ACard() 
+	public aCard() 
 	{
 	
 	}
@@ -66,4 +66,34 @@ public abstract class ACard : MonoBehaviour
 			ColumnID = value;
 		}
 	}
+}
+
+public class Work : aCard 
+{
+
+}
+
+public class Food : aCard 
+{
+	
+}
+
+public class Hangout : aCard 
+{
+	
+}
+
+public class Exercise : aCard 
+{
+	
+}
+
+public class Relationship : aCard 
+{
+	
+}
+
+public class Vacation : aCard 
+{
+	
 }

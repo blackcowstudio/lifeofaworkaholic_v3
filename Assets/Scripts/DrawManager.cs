@@ -1,5 +1,6 @@
 using UnityEngine;
 using System.Collections;
+using System;
 
 public class DrawManager : MonoBehaviour
 {
@@ -20,7 +21,7 @@ public class DrawManager : MonoBehaviour
 		CardPosition = new GameObject[(card.ListSize/card.ColumnSize),card.ColumnSize];
 		
 		
-		// for loop to create list of caards
+		// for loop to create list of cards
 		for (int i = 0; i<card.ListSize; i++)
 		{ 
 			// depending on listSize, calculate no. of rows dynamically based on column size
@@ -29,13 +30,13 @@ public class DrawManager : MonoBehaviour
 			
 			// create GameObject to hold sprite
 			GameObject obj = new GameObject();
-			
-			// AddComponent of Work script
+		
+			// AddComponent of Cards
 			obj.AddComponent<Work>();
 			obj.GetComponent<Work>().myRowID = row;
 			obj.GetComponent<Work>().myColumnID = column;
 			
-			// name the created GameObject with string by {0} -> row , {1} -> column , {2} -> color int
+			// name the created GameObject with string by {0} -> row , {1} -> column , {2} -> CardType
 			obj.name = string.Format("card_{0}_{1}_{2}", row , column, card.CardList[i]);
 			
 			// Attach BoxCollider2D to GameObject and turn it as trigger

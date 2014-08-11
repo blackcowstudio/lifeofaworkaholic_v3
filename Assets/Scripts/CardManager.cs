@@ -2,23 +2,7 @@
 using System;
 using System.Collections;
 
-public enum Activities 
-{
-	Work,
-	Food,
-	Socialize,
-	Exercise,
-	Relationship
-}
-public enum Colors 
-{
-	Purple,
-	Green,
-	Yellow,
-	Grey,
-	Red
-}
-
+public enum Activities { Working, Food, Hangout, Exercise, Relationship, Vacation};
 
 public class CardManager
 {
@@ -27,6 +11,7 @@ public class CardManager
 	public int ColumnSize = 5;
 	public int RowSize = 5;
 	public int[] CardList;
+	//public aCard[] Cards;
 
 	// constructor
 	public CardManager(int listNum, int columnNum) 
@@ -41,6 +26,7 @@ public class CardManager
 	{
 		// initialize array with listSize
 		CardList = new int[ListSize];
+		//Cards = new aCard[ListSize];
 
 		//get enum size
 		int EnumSize = Enum.GetNames(typeof(Activities)).Length;
@@ -49,6 +35,7 @@ public class CardManager
 		for (int i = 0; i<CardList.Length; i++) {
 			int result = MathManager.RandomInt(EnumSize);
 			CardList[i] = result;
+			//Cards[i] = Enum.GetName(typeof(Activities),result);
 		}
 	}
 
